@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\suryaprakash.devathi\.android\build-cache\1de6ea10981397ef58b179ec8adc0db87efed2e2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="746274223beb11b1cda7854d7eec3038695c2c93">
+        <dex dex="E:\NativeScript\FitnessApp\platforms\android\app\build\intermediates\pre-dexed\debug\classes_d33a886be6a77fbfee49697268cca8720e7dd084.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\suryaprakash.devathi\.android\build-cache\ae269a71c7abccd06c9290838b7af32415b15203\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
+        <dex dex="E:\NativeScript\FitnessApp\platforms\android\app\build\intermediates\pre-dexed\debug\classes_d472fb814b637faa3f39be0f53172727d16cf741.jar" />
+    </item>
+
+</items>

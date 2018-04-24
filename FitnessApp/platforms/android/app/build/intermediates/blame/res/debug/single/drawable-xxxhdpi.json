@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\NativeScript\\FitnessApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\icon.png",
+        "source": "E:\\NativeScript\\FitnessApp\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\icon.png"
+    },
+    {
+        "merged": "E:\\NativeScript\\FitnessApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\background.png",
+        "source": "E:\\NativeScript\\FitnessApp\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\background.png"
+    }
+]
