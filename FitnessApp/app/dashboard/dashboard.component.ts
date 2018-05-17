@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
-import { RouterExtensions } from 'nativescript-angular/router'
+import { RouterExtensions } from 'nativescript-angular/router';
+import * as firebase from "nativescript-plugin-firebase";
+
 
 
 @Component({
@@ -14,4 +16,12 @@ export class DashBoardComponent {
 
     }
 
+    public logOut(){
+      var logOut=  firebase.logout();
+      console.log("logoutsuccessful");
+      if(logOut){
+          this.router.navigate(['/login']);
+      }
+  
+    }
 }

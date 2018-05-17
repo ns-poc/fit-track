@@ -8,20 +8,9 @@
 android {  
   defaultConfig {  
     generatedDensities = []
-    applicationId = "org.nativescript.FitnessApp" 
-    
-    //override supported platforms
-    // ndk {
-    //       abiFilters.clear()
-    //   		abiFilters "armeabi-v7a"
- 		// }
-  
+    applicationId = "org.nativescript.FitnessApp"  
   }  
   aaptOptions {  
     additionalParameters "--no-version-vectors"  
   }  
-
-  project.ext {
-    googlePlayServicesVersion = "15.0.+"
-  }
 } 
