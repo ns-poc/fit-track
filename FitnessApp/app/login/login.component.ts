@@ -32,6 +32,19 @@ export class LoginComponent {
             dialogs.alert(err);
         })
     }
+
+    public onFacebookLogin() {
+        firebase.login({
+            type: firebase.LoginType.FACEBOOK,
+        }).then(user => {
+            console.log('Login success -- User details');
+            console.log(JSON.stringify(user));
+            this.router.navigate(["/dashboard"]);
+        }).catch(err => {
+            console.log(err);
+            dialogs.alert(err);
+        })
+    }
     public logOut(){
         firebase.logout();
     }
