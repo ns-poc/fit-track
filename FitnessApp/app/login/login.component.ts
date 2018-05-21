@@ -17,7 +17,11 @@ import * as dialogs from "ui/dialogs";
 })
 export class LoginComponent {
     constructor(private router: Router, private routerExtensions: RouterExtensions) {
-
+        if(firebase.getCurrentUser()) {
+            // redirect to dashboard page if user already logged in
+            console.log("User already logged in");
+            this.router.navigate(["/dashboard"]);
+        }
     }
 
     public onGoogleLogin() {
