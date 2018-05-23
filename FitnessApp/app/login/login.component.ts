@@ -6,6 +6,7 @@ import * as firebase from "nativescript-plugin-firebase";
 import * as frame from "ui/frame";
 import { RouterExtensions } from "nativescript-angular/router";
 import * as dialogs from "ui/dialogs";
+import * as appSettings from "application-settings";
 
 
 
@@ -17,15 +18,12 @@ import * as dialogs from "ui/dialogs";
 })
 export class LoginComponent {
     constructor(private router: Router, private routerExtensions: RouterExtensions) {
-        if(firebase.getCurrentUser()) {
-            // redirect to dashboard page if user already logged in
-            console.log("User already logged in");
-            this.router.navigate(["/dashboard"]);
+        if (appSettings.getBoolean("loggedIn")) {
+            this.routerExtensions.navigate(["/dashboard"],{ clearHistory: true });
         }
     }
 
     public onGoogleLogin() {
-        console.log("hitdsnkjdf");
         firebase.login({
             type: firebase.LoginType.GOOGLE,
         }).then(user => {
@@ -44,6 +42,7 @@ export class LoginComponent {
         }).then(user => {
             console.log('Login success -- User details');
             console.log(JSON.stringify(user));
+            appSettings.setBoolean("loggedIn", true);
             this.router.navigate(["/dashboard"]);
         }).catch(err => {
             console.log(err);
@@ -51,7 +50,9 @@ export class LoginComponent {
         })
     }
     public logOut(){
-        firebase.logout();
+        firebase.logout().then(function (){
+            appSettings.setBoolean("loggedIn", false);
+        });
     }
 
 }
