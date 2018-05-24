@@ -5,6 +5,7 @@ import { AppComponent } from "./app.component";
 
 import { LoginComponent } from "./login/login.component";
 import { DashBoardComponent } from "./dashboard/dashboard.component";
+import { AustraliaComponent } from "./australia/australia.component"
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { DashBoardComponent } from "./dashboard/dashboard.component";
     declarations: [
         AppComponent,
         LoginComponent,
-        DashBoardComponent
+        DashBoardComponent,
+        AustraliaComponent
     ],
     providers: [
         

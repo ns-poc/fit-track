@@ -1,13 +1,20 @@
 <ActionBar title="ActionBar">
-        <StackLayout orientation="horizontal"
+    <DockLayout orientation="horizontal"
         ios:horizontalAlignment="center"
         android:horizontalAlignment="left">
-        <Label text="FitnessApp"  class="action-label"></Label>
-        <Button class="btn btn-primary btn-active submit-button" (tap)="logOut()" id="button" text="Sign Out"></Button>
-      </StackLayout>
+        <Label text="Dashboard"  class="action-label"></Label>
+        <Button class="btn btn-primary btn-active submit-button" (tap)="logOut()" dock="right" text="Sign Out"></Button>
+    </DockLayout>
 </ActionBar>
 
 <StackLayout>
-    <Image src="~/images/login.png"></Image>
-    <TextField text="Welcome To Dashboard"></TextField>
+    <Image src="https://play.nativescript.org/dist/assets/img/NativeScript_logo.png"></Image>
+    <ListView class="list-group" [items]="countries" (itemTap)="onItemTap($event)" style="height:1250px">
+        <ng-template let-country="item">
+            <FlexboxLayout flexDirection="row" class="list-group-item">
+                <Image [src]="country.imageSrc" class="thumb img-circle"></Image>
+                <Label [text]="country.name" class="list-group-item-heading" verticalAlignment="center" style="width: 60%" (tap)="onTap()"></Label>
+            </FlexboxLayout>
+        </ng-template>
+    </ListView>
 </StackLayout>

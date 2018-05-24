@@ -10,7 +10,7 @@ Image {
     margin-bottom: 20;
 }
 
-Button, TextField {
+TextField {
     margin-left: 16;
     margin-right: 16;
     margin-bottom: 10;
@@ -20,4 +20,12 @@ Button, TextField {
     background-color: #CB1D00;
     color: white;
     margin-top: 20;
+    float: right;
+}
+
+.action-label {
+    color: #3C5AFD;
+    font-size: 24;
+    font-weight: bold;
+    vertical-align: center;
 }
