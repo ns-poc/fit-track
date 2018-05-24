@@ -20,7 +20,7 @@ TextField {
     background-color: #CB1D00;
     color: white;
     margin-top: 20;
-    float: right;
+    float : right;
 }
 
 .action-label {
