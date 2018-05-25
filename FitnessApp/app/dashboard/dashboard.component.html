@@ -1,11 +1,17 @@
-<ActionBar title="ActionBar">
-    <DockLayout orientation="horizontal"
-        ios:horizontalAlignment="center"
-        android:horizontalAlignment="left">
-        <Label text="Dashboard"  class="action-label"></Label>
-        <Button class="btn btn-primary btn-active submit-button" (tap)="logOut()" dock="right" text="Sign Out"></Button>
-    </DockLayout>
-</ActionBar>
+    <ActionBar title="Dashboard">
+        <ActionItem (tap)="onShare()"
+                    ios.systemIcon="9" ios.position="left"
+                    android.systemIcon="ic_menu_share" android.position="actionBar"></ActionItem>
+        <ActionItem (tap)="onProfileClick()"
+                    ios.systemIcon="16" ios.position="right"
+                    text="profile" android.position="popup"></ActionItem>
+        <ActionItem (tap)="onSettingsClick()"
+                    ios.systemIcon="16" ios.position="right"
+                    text="settings" android.position="popup"></ActionItem>
+        <ActionItem (tap)="logOut()"
+                    ios.systemIcon="16" ios.position="right"
+                    text="Logout" android.position="popup"></ActionItem>
+    </ActionBar>
 
 <StackLayout>
     <Image src="https://play.nativescript.org/dist/assets/img/NativeScript_logo.png"></Image>

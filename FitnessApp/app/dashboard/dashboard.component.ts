@@ -45,6 +45,18 @@ export class DashBoardComponent {
         this.router.navigate(["australia"]);
     }
 
+    public onShare(){
+
+    }
+    
+    public onProfileClick(){
+
+    }
+
+    public onSettingsClick(){
+        
+    }
+
     public logOut(){
       var logOut=  firebase.logout();
       console.log("logoutsuccessful");
